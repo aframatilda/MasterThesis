@@ -457,13 +457,8 @@ int main(int argc, char* argv[]) {
                 std::string suffix = input_paths[0].substr(input_paths[0].find_last_of(".") + 1);
                 std::transform(suffix.begin(), suffix.end(), suffix.begin(), ::tolower);
                 if (suffix == "insp" || suffix == "jpg") {
-<<<<<<< HEAD
                      auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
-                   /* image_stitcher->SetInputPath(input_paths);
-=======
-                    auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
-                    image_stitcher->SetInputPath(input_paths);
->>>>>>> main
+                    /*image_stitcher->SetInputPath(input_paths);
                     image_stitcher->SetStitchType(stitch_type);
                     image_stitcher->SetHDRType(hdr_type);
                     image_stitcher->SetOutputPath(output_path);
@@ -472,7 +467,7 @@ int main(int argc, char* argv[]) {
                     image_stitcher->EnableDenoise(enable_denoise);
                     image_stitcher->EnableCuda(enable_cuda);
                     image_stitcher->EnableColorPlus(enable_colorplus, colorpuls_model_path);
-                    image_stitcher->Stitch();
+                    image_stitcher->Stitch();*/
                 }
             }
         }
