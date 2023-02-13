@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ^C:\USERS\VICTORIA\DOCUMENTS\GITHUB\MASTERTHESIS\BUILD\CMAKEFILES\3621D238DE5C5F291BE9E8403BF251BE\GENERATE.STAMP.RULE
-=======
-^C:\USERS\SIGNA\DESKTOP\MASTERTHESIS\BUILD\CMAKEFILES\AA99B40A2A7DB2B8CDAC8DC0A90A438B\GENERATE.STAMP.RULE
->>>>>>> main
 setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Victoria/Documents/GitHub/MasterThesis/example -BC:/Users/Victoria/Documents/GitHub/MasterThesis/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CameraSDKTest.sln
 if %errorlevel% neq 0 goto :cmEnd
