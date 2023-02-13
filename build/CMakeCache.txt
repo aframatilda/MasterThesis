@@ -186,13 +186,13 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=OFF
 
 //Value Computed by CMake
-CameraSDKTest_BINARY_DIR:STATIC=C:/Users/signa/Desktop/Masterthesis/build
+CameraSDKTest_BINARY_DIR:STATIC=C:/Users/signa/Desktop/MasterThesis/build
 
 //Value Computed by CMake
 CameraSDKTest_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-CameraSDKTest_SOURCE_DIR:STATIC=C:/Users/signa/Desktop/Masterthesis/example
+CameraSDKTest_SOURCE_DIR:STATIC=C:/Users/signa/Desktop/MasterThesis/example
 
 
 ########################

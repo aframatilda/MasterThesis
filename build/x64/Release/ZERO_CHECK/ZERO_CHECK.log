@@ -1,1 +1,32 @@
 ﻿  1>Checking Build System
+  CMake is re-running because C:/Users/signa/Desktop/Masterthesis/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/signa/Desktop/Masterthesis/example/CMakeLists.txt'
+    is newer than 'C:/Users/signa/Desktop/Masterthesis/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Configuring done (0.1s)
+  CMake Warning at CMakeLists.txt:16 (add_executable):
+    Target "CameraSDKTest" requests linking to directory
+    "C:/Users/signa/Desktop/MasterThesis/example/../lib".  Targets may link
+    only to libraries.  CMake is dropping the item.
+  
+  
+  CMake Warning at CMakeLists.txt:16 (add_executable):
+    Target "CameraSDKTest" requests linking to directory
+    "C:/Users/signa/Desktop/MasterThesis/example/../lib".  Targets may link
+    only to libraries.  CMake is dropping the item.
+  
+  
+  CMake Warning at CMakeLists.txt:16 (add_executable):
+    Target "CameraSDKTest" requests linking to directory
+    "C:/Users/signa/Desktop/MasterThesis/example/../lib".  Targets may link
+    only to libraries.  CMake is dropping the item.
+  
+  
+  CMake Warning at CMakeLists.txt:16 (add_executable):
+    Target "CameraSDKTest" requests linking to directory
+    "C:/Users/signa/Desktop/MasterThesis/example/../lib".  Targets may link
+    only to libraries.  CMake is dropping the item.
+  
+  
+  -- Generating done (0.1s)
+  -- Build files have been written to: C:/Users/signa/Desktop/MasterThesis/build
