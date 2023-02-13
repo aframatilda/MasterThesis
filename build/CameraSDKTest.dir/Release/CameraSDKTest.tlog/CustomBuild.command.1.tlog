@@ -1,6 +1,6 @@
-^C:\USERS\SIGNA\DESKTOP\MASTERTHESIS\EXAMPLE\CMAKELISTS.TXT
+^C:\USERS\VICTORIA\DOCUMENTS\GITHUB\MASTERTHESIS\EXAMPLE\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/signa/Desktop/MasterThesis/example -BC:/Users/signa/Desktop/MasterThesis/build --check-stamp-file C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Victoria/Documents/GitHub/MasterThesis/example -BC:/Users/Victoria/Documents/GitHub/MasterThesis/build --check-stamp-file C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

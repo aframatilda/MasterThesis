@@ -5,7 +5,7 @@
 #include <camera/device_discovery.h>
 #include <regex>
 
-//**************** mage stiching ****************
+//**************** Image stiching ****************
 #include <stitcher/stitcher.h>
 #include <stitcher/common.h>
 #include <algorithm>
@@ -458,8 +458,8 @@ int main(int argc, char* argv[]) {
                 std::string suffix = input_paths[0].substr(input_paths[0].find_last_of(".") + 1);
                 std::transform(suffix.begin(), suffix.end(), suffix.begin(), ::tolower);
                 if (suffix == "insp" || suffix == "jpg") {
-                    /* auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
-                    image_stitcher->SetInputPath(input_paths);
+                     auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
+                   /* image_stitcher->SetInputPath(input_paths);
                     image_stitcher->SetStitchType(stitch_type);
                     image_stitcher->SetHDRType(hdr_type);
                     image_stitcher->SetOutputPath(output_path);
