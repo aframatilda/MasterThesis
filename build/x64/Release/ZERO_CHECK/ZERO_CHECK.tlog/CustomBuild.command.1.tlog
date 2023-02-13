@@ -1,4 +1,4 @@
-^C:\USERS\SIGNA\DESKTOP\MASTERTHESIS\BUILD\CMAKEFILES\E86EE4BB693ADE5F3FF7B59A4D71E2B5\GENERATE.STAMP.RULE
+^C:\USERS\SIGNA\DESKTOP\MASTERTHESIS\BUILD\CMAKEFILES\AA99B40A2A7DB2B8CDAC8DC0A90A438B\GENERATE.STAMP.RULE
 setlocal
 "C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/signa/Desktop/MasterThesis/example -BC:/Users/signa/Desktop/MasterThesis/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/signa/Desktop/MasterThesis/build/CameraSDKTest.sln
 if %errorlevel% neq 0 goto :cmEnd
