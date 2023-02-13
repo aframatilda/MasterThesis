@@ -1,1 +1,11 @@
 ﻿  1>Checking Build System
+<<<<<<< HEAD
+=======
+  CMake is re-running because C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/generate.stamp is out-of-date.
+    the file 'C:/Users/signa/Desktop/MasterThesis/example/CMakeLists.txt'
+    is newer than 'C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/generate.stamp.depend'
+    result='-1'
+  -- Configuring done (0.0s)
+  -- Generating done (0.1s)
+  -- Build files have been written to: C:/Users/signa/Desktop/MasterThesis/build
+>>>>>>> main
