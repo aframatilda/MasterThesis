@@ -4,7 +4,7 @@ project(CameraSDKTest)
 set(CMAKE_CXX_STANDARD 11) 
 
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../include)
-link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/../lib)
+link_libraries(${CMAKE_CURRENT_SOURCE_DIR}/../lib/*.lib)
 
 file(GLOB_RECURSE SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*.cc" "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp") 
 
