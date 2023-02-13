@@ -7,7 +7,10 @@
 *.rsuser
 *.suo
 *.user
-*.dll
+/build/cublas64_11.dll
+/build/cublasLt64_11.dll
+/build/cufft64_10.dll
+/build/opencv_world410.dll
 *.userosscache
 *.sln.docstates
 
