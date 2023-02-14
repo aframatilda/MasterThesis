@@ -24,8 +24,13 @@ events:
       The output was:
       0
       MSBuild version 17.4.1+9a89d02ff for .NET Framework
+<<<<<<< HEAD
       Build started 2023-02-13 15:04:25.
       Project "C:\\Users\\Victoria\\Documents\\GitHub\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+=======
+      Build started 2023-02-13 16:12:25.
+      Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+>>>>>>> afra
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdC.tlog\\".
@@ -50,7 +55,11 @@ events:
           0 Warning(s)
           0 Error(s)
       
+<<<<<<< HEAD
       Time Elapsed 00:00:00.61
+=======
+      Time Elapsed 00:00:00.65
+>>>>>>> afra
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -76,8 +85,13 @@ events:
       The output was:
       0
       MSBuild version 17.4.1+9a89d02ff for .NET Framework
+<<<<<<< HEAD
       Build started 2023-02-13 15:04:26.
       Project "C:\\Users\\Victoria\\Documents\\GitHub\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+=======
+      Build started 2023-02-13 16:12:26.
+      Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+>>>>>>> afra
       PrepareForBuild:
         Creating directory "Debug\\".
         Creating directory "Debug\\CompilerIdCXX.tlog\\".
@@ -102,7 +116,11 @@ events:
           0 Warning(s)
           0 Error(s)
       
+<<<<<<< HEAD
       Time Elapsed 00:00:00.53
+=======
+      Time Elapsed 00:00:00.48
+>>>>>>> afra
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -121,8 +139,13 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
+<<<<<<< HEAD
       source: "C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-pt97ql"
       binary: "C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-pt97ql"
+=======
+      source: "C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-qob8ds"
+      binary: "C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-qob8ds"
+>>>>>>> afra
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -131,6 +154,7 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
+<<<<<<< HEAD
         Change Dir: C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-pt97ql
         
         Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e2402.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
@@ -155,12 +179,42 @@ events:
           Deleting file "cmTC_e2402.dir\\Debug\\cmTC_e2402.tlog\\unsuccessfulbuild".
           Touching "cmTC_e2402.dir\\Debug\\cmTC_e2402.tlog\\cmTC_e2402.lastbuildstate".
         Done Building Project "C:\\Users\\Victoria\\Documents\\GitHub\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pt97ql\\cmTC_e2402.vcxproj" (default targets).
+=======
+        Change Dir: C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-qob8ds
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1fbc7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+        Build started 2023-02-13 16:12:27.
+        Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qob8ds\\cmTC_1fbc7.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_1fbc7.dir\\Debug\\".
+          Creating directory "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qob8ds\\Debug\\".
+          Creating directory "cmTC_1fbc7.dir\\Debug\\cmTC_1fbc7.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_1fbc7.dir\\Debug\\cmTC_1fbc7.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fbc7.dir\\Debug\\\\" /Fd"cmTC_1fbc7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31937 for x64
+          CMakeCCompilerABI.c
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fbc7.dir\\Debug\\\\" /Fd"cmTC_1fbc7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qob8ds\\Debug\\cmTC_1fbc7.exe" /INCREMENTAL /ILK:"cmTC_1fbc7.dir\\Debug\\cmTC_1fbc7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-qob8ds/Debug/cmTC_1fbc7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-qob8ds/Debug/cmTC_1fbc7.lib" /MACHINE:X64  /machine:x64 cmTC_1fbc7.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_1fbc7.vcxproj -> C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qob8ds\\Debug\\cmTC_1fbc7.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_1fbc7.dir\\Debug\\cmTC_1fbc7.tlog\\unsuccessfulbuild".
+          Touching "cmTC_1fbc7.dir\\Debug\\cmTC_1fbc7.tlog\\cmTC_1fbc7.lastbuildstate".
+        Done Building Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qob8ds\\cmTC_1fbc7.vcxproj" (default targets).
+>>>>>>> afra
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
+<<<<<<< HEAD
         Time Elapsed 00:00:00.60
+=======
+        Time Elapsed 00:00:00.48
+>>>>>>> afra
         
       exitCode: 0
   -
@@ -172,8 +226,13 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
+<<<<<<< HEAD
       source: "C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-k73zrp"
       binary: "C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-k73zrp"
+=======
+      source: "C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-knts0v"
+      binary: "C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-knts0v"
+>>>>>>> afra
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -182,6 +241,7 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
+<<<<<<< HEAD
         Change Dir: C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-k73zrp
         
         Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6a612.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
@@ -206,12 +266,42 @@ events:
           Deleting file "cmTC_6a612.dir\\Debug\\cmTC_6a612.tlog\\unsuccessfulbuild".
           Touching "cmTC_6a612.dir\\Debug\\cmTC_6a612.tlog\\cmTC_6a612.lastbuildstate".
         Done Building Project "C:\\Users\\Victoria\\Documents\\GitHub\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k73zrp\\cmTC_6a612.vcxproj" (default targets).
+=======
+        Change Dir: C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-knts0v
+        
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_713f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+        Build started 2023-02-13 16:12:28.
+        Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knts0v\\cmTC_713f8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_713f8.dir\\Debug\\".
+          Creating directory "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knts0v\\Debug\\".
+          Creating directory "cmTC_713f8.dir\\Debug\\cmTC_713f8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_713f8.dir\\Debug\\cmTC_713f8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_713f8.dir\\Debug\\\\" /Fd"cmTC_713f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31937 for x64
+          CMakeCXXCompilerABI.cpp
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_713f8.dir\\Debug\\\\" /Fd"cmTC_713f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knts0v\\Debug\\cmTC_713f8.exe" /INCREMENTAL /ILK:"cmTC_713f8.dir\\Debug\\cmTC_713f8.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-knts0v/Debug/cmTC_713f8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/signa/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-knts0v/Debug/cmTC_713f8.lib" /MACHINE:X64  /machine:x64 cmTC_713f8.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_713f8.vcxproj -> C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knts0v\\Debug\\cmTC_713f8.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_713f8.dir\\Debug\\cmTC_713f8.tlog\\unsuccessfulbuild".
+          Touching "cmTC_713f8.dir\\Debug\\cmTC_713f8.tlog\\cmTC_713f8.lastbuildstate".
+        Done Building Project "C:\\Users\\signa\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-knts0v\\cmTC_713f8.vcxproj" (default targets).
+>>>>>>> afra
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
+<<<<<<< HEAD
         Time Elapsed 00:00:00.60
+=======
+        Time Elapsed 00:00:00.50
+>>>>>>> afra
         
       exitCode: 0
 ...

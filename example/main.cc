@@ -4,6 +4,8 @@
 #include <camera/photography_settings.h>
 #include <camera/device_discovery.h>
 #include <regex>
+#include <vector>
+#include <string>
 
 //**************** Image stiching ****************
 #include <stitcher/stitcher.h>
@@ -175,20 +177,27 @@ int main(int argc, char* argv[]) {
 
         //Download file from camera
         if (option == 4) {
-            std::string file_to_download;
-            std::string file_to_save;
-            std::cout << "Please input full file path to download: ";
-            std::cin >> file_to_download;
-            std::cout << "Please input full file path to save: ";
-            std::cin >> file_to_save;
+            std::string path_to_download = "/DCIM/Camera01/";
+            std::string image_to_download;
 
-            const auto ret = cam->DownloadCameraFile(file_to_download,
-                file_to_save);
+            std::string path_to_save = "C:/Users/signa/Desktop/MasterThesis/Images/";
+            std::string image_to_save;
+
+            std::cout << "Please input image to download: ";
+            std::cin >> image_to_download;
+            std::cout << "Please input image to save: ";
+            std::cin >> image_to_save;
+
+            std::string full_path_download = path_to_download + image_to_download;
+            std::string full_path_save = path_to_save + image_to_save;
+
+            const auto ret = cam->DownloadCameraFile(full_path_download,
+                full_path_save);
             if (ret) {
-                std::cout << "Download " << file_to_download << " succeed!!!" << std::endl;
+                std::cout << "Download " << image_to_download << " succeed!!!" << std::endl;
             }
             else {
-                std::cout << "Download " << file_to_download << " failed!!!" << std::endl;
+                std::cout << "Download " << image_to_download << " failed!!!" << std::endl;
             }
         }
 
@@ -341,8 +350,9 @@ int main(int argc, char* argv[]) {
             std::cout << "State : " << status.state << std::endl;
         }
 
-        if (option ==13) {
+        if (option == 13) {
             std::vector<std::string> input_paths;
+            std::cout << "Please type path for image stitching: " << std::endl;
             std::string output_path;
 
             STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;
