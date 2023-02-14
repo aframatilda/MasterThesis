@@ -260,13 +260,16 @@ int main(int argc, char* argv[]) {
                 }
 
                 std::string download_url = url.GetSingleOrigin();
-                std::string save_path = "D:/testImage" + download_url;
+                std::string image_insp = download_url.substr(download_url.rfind("/") + 1);
+                std::string image_jpg = image_insp.substr(0, image_insp.find('.')) + ".jpg";
+                std::string save_path = "C:/Users/signa/Desktop/MasterThesis/Images/" + image_jpg;
+
                 const auto ret = cam->DownloadCameraFile(download_url, save_path);
                 if (ret) {
-                    std::cout << "Download " << download_url << " succeed!!!" << std::endl;
+                    std::cout << "Download " << image_jpg << " succeed!!!" << std::endl;
                 }
                 else {
-                    std::cout << "Download " << download_url << " failed!!!" << std::endl;
+                    std::cout << "Download " << image_jpg << " failed!!!" << std::endl;
                 }
             }
             cam->Close();
@@ -352,7 +355,11 @@ int main(int argc, char* argv[]) {
 
         if (option == 13) {
             std::vector<std::string> input_paths;
+            std::string input;
             std::cout << "Please type path for image stitching: " << std::endl;
+            while (std::cin >> input)
+                input_paths.push_back(input);
+
             std::string output_path;
 
             STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;
