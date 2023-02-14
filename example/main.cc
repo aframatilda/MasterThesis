@@ -180,7 +180,7 @@ int main(int argc, char* argv[]) {
             std::string path_to_download = "/DCIM/Camera01/";
             std::string image_to_download;
 
-            std::string path_to_save = "C:/Users/signa/Desktop/MasterThesis/Images/";
+            std::string path_to_save = "C:/Users/Victoria/Documents/GitHub/MasterThesis/Images/";
             std::string image_to_save;
 
             std::cout << "Please input image to download: ";
