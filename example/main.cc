@@ -126,7 +126,7 @@ int main(int argc, char* argv[]) {
     std::cout << "11: Get battery status" << std::endl;
     std::cout << "12: Get storage info" << std::endl;
     std::cout << "13: Stitch image" << std::endl;
-    std::cout << "0: Exit" << std::endl;
+    std::cout << "0: Exit\n" << std::endl;
 
     auto camera_type = cam->GetCameraType();
 
@@ -354,13 +354,24 @@ int main(int argc, char* argv[]) {
         }
 
         if (option == 13) {
-            std::vector<std::string> input_paths;
-            std::string input;
-            std::cout << "Please type path for image stitching: " << std::endl;
-            while (std::cin >> input)
-                input_paths.push_back(input);
 
-            std::string output_path;
+            std::vector<std::string> input_paths = { "/DCIM/Camera01/IMG_20230203_104605_00_028.insp" };
+            std::string output_path = "C:/Users/signa/Desktop/MasterThesis/Images/test.jpg";
+
+            /* std::string input;
+
+             std::cout << "Enter image path. Enter in * to indicate you are done" << std::endl;
+
+             while (input != "*")
+             {
+                 std::cin >> input;
+                 input_paths.push_back(input);
+             }
+             if (input == "*")
+             {
+                 for (int i = 0; i < (input_paths.size() - 1);i++)
+                     std::cout << input_paths[i] << " ";
+             }*/
 
             STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;
             HDR_TYPE hdr_type = HDR_TYPE::ImageHdr_NONE;
@@ -489,29 +500,29 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        if (option == 30) {
-            const auto file_list = cam->GetCameraFilesList();
-            for (const auto& file : file_list) {
-                std::string save_path = "D:/testImage" + file;
-                int ret = cam->DownloadCameraFile(file, save_path);
-                if (ret) {
-                    std::cout << "Download " << file << " succeed!!!" << std::endl;
+        /*    if (option == 30) {
+                const auto file_list = cam->GetCameraFilesList();
+                for (const auto& file : file_list) {
+                    std::string save_path = "D:/testImage" + file;
+                    int ret = cam->DownloadCameraFile(file, save_path);
+                    if (ret) {
+                        std::cout << "Download " << file << " succeed!!!" << std::endl;
+                    }
+                    else {
+                        std::cout << "Download " << file << " failed!!!" << std::endl;
+                    }
                 }
-                else {
-                    std::cout << "Download " << file << " failed!!!" << std::endl;
-                }
-            }
-        }
+            }*/
 
-        if (option == 31) {
-            const auto file_list = cam->GetCameraFilesList();
-            for (const auto& file : file_list) {
-                const auto ret = cam->DeleteCameraFile(file);
-                if (ret) {
-                    std::cout << file << " Deletion succeed" << std::endl;
-                }
-            }
-        }
+            /*   if (option == 31) {
+                   const auto file_list = cam->GetCameraFilesList();
+                   for (const auto& file : file_list) {
+                       const auto ret = cam->DeleteCameraFile(file);
+                       if (ret) {
+                           std::cout << file << " Deletion succeed" << std::endl;
+                       }
+                   }
+               }*/
     }
     cam->Close();
     return 0;
