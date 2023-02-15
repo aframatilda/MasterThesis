@@ -355,11 +355,10 @@ int main(int argc, char* argv[]) {
 
         if (option == 13) {
 
-            std::vector<std::string> input_paths = { "/DCIM/Camera01/IMG_20230203_104605_00_028.insp" };
+            std::vector<std::string> input_paths = { "C:/Users/signa/Desktop/MasterThesis/Images/IMG_20230208_223020_00_031.jpg" };
             std::string output_path = "C:/Users/signa/Desktop/MasterThesis/Images/test.jpg";
 
-            /* std::string input;
-
+             /*std::string input;
              std::cout << "Enter image path. Enter in * to indicate you are done" << std::endl;
 
              while (input != "*")
