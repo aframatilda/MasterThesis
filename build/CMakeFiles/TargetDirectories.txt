@@ -1,0 +1,3 @@
+C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/CameraSDKTest.dir
+C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CMakeFiles/ZERO_CHECK.dir

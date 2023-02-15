@@ -17,27 +17,6 @@
 
 using namespace std::chrono;
 
-const std::string helpstr =
-"{-help                 | default               | print this message            }\n"
-"{-inputs               | None                  | input files                   }\n"
-"{-output               | None                  | out path                      }\n"
-"{-stitch_type          | template              | template                      }\n"
-"{                                              | optflow                       }\n"
-"{                                              | dynamicstitch                 }\n"
-"{-hdr_type             | None                  | singleimagehdr                }\n"
-"{                                              | multiimagehdr_mbb             }\n"
-"{                                              | multiimagehdr_mpl             }\n"
-"{-bitrate              | same as input vidoe   | the bitrate of ouput file     }\n"
-"{-enable_flowstate     | OFF                   | open flowstate                }\n"
-"{-enable_directionlock | OFF                   | open directionlock            }\n"
-"{-output_size          | 1920x960              | the resolution of output      }\n"
-"{-disable_cuda         | true                  | disable_cuda                  }\n"
-"{-enable_stitchfusion  | OFF                   | stitch_fusion                 }\n"
-"{-enable_denoise       | OFF                   | enable denoise                }\n"
-"{-enable_colorplus     | OFF                   | enable colorplus              }\n"
-"{-colorplus_model      |                       | colorplus_model path          }\n"
-"{-gpu_no               | default 0             | gpu number begin with 0       }\n";
-//****************
 
 class TestStreamDelegate : public ins_camera::StreamDelegate {
 public:
@@ -180,7 +159,7 @@ int main(int argc, char* argv[]) {
             std::string path_to_download = "/DCIM/Camera01/";
             std::string image_to_download;
 
-            std::string path_to_save = "C:/Users/Victoria/Documents/GitHub/MasterThesis/Images/";
+            std::string path_to_save = "C:/Users/signa/Desktop/MasterThesis/Images/";
             std::string image_to_save;
 
             std::cout << "Please input image to download: ";
@@ -355,23 +334,31 @@ int main(int argc, char* argv[]) {
 
         if (option == 13) {
 
-            std::vector<std::string> input_paths = { "C:/Users/signa/Desktop/MasterThesis/Images/IMG_20230208_223020_00_031.jpg" };
-            std::string output_path = "C:/Users/signa/Desktop/MasterThesis/Images/test.jpg";
+     
+            std::vector<std::string> input_paths; // { "C:/Users/Victoria/Documents/Github/MasterThesis/Images/IMG_20230208_223020_00_031.jpg" };
+            std::string input;
+            std::string output_path; // = "C:/Users/Victoria/Documents/Github/MasterThesis/Images/Test1.jpg";
 
-             /*std::string input;
-             std::cout << "Enter image path. Enter in * to indicate you are done" << std::endl;
 
-             while (input != "*")
-             {
-                 std::cin >> input;
-                 input_paths.push_back(input);
-             }
-             if (input == "*")
-             {
-                 for (int i = 0; i < (input_paths.size() - 1);i++)
-                     std::cout << input_paths[i] << " ";
-             }*/
+            std::string path_to_stitch = "/DCIM/Camera01/";
+            std::string image_to_stitch;
 
+            std::string path_to_save = "C:/Users/Victoria/Documents/GitHub/MasterThesis/Images/";
+            std::string image_to_save;
+
+
+            std::cout << "Please input image to stitch: ";
+
+            while (input != "*") {
+                std::cin >> input;
+                input_paths.push_back(input);
+                std::cout << input; 
+            }
+
+            std::cout << "Please enter path to stitched image: " << input;
+            std::cin >> output_path;
+            std::cout << output_path;
+        
             STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;
             HDR_TYPE hdr_type = HDR_TYPE::ImageHdr_NONE;
 
@@ -454,19 +441,17 @@ int main(int argc, char* argv[]) {
                     sscanf(argv[++i], "%dx%d", &output_width, &output_height);
                 }
                 else if (std::string("-help") == std::string(argv[i])) {
-                    std::cout << helpstr << std::endl;
+                   
                 }
             }
 
             if (input_paths.empty()) {
                 std::cout << "can not find input_file" << std::endl;
-                std::cout << helpstr << std::endl;
                 return -1;
             }
 
             if (output_path.empty()) {
                 std::cout << "can not find output_file" << std::endl;
-                std::cout << helpstr << std::endl;
                 return -1;
             }
 
@@ -484,8 +469,8 @@ int main(int argc, char* argv[]) {
                 std::string suffix = input_paths[0].substr(input_paths[0].find_last_of(".") + 1);
                 std::transform(suffix.begin(), suffix.end(), suffix.begin(), ::tolower);
                 if (suffix == "insp" || suffix == "jpg") {
-                     auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
-                    /*image_stitcher->SetInputPath(input_paths);
+                    auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
+                    image_stitcher->SetInputPath(input_paths);
                     image_stitcher->SetStitchType(stitch_type);
                     image_stitcher->SetHDRType(hdr_type);
                     image_stitcher->SetOutputPath(output_path);
@@ -494,7 +479,7 @@ int main(int argc, char* argv[]) {
                     image_stitcher->EnableDenoise(enable_denoise);
                     image_stitcher->EnableCuda(enable_cuda);
                     image_stitcher->EnableColorPlus(enable_colorplus, colorpuls_model_path);
-                    image_stitcher->Stitch();*/
+                    image_stitcher->Stitch();
                 }
             }
         }
