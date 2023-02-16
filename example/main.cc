@@ -159,12 +159,12 @@ int main(int argc, char* argv[]) {
 			std::string path_to_download = "/DCIM/Camera01/";
 			std::string image_to_download;
 
-			std::string path_to_save = "C:/Users/Desktop/MasterThesis/Images/";
+			std::string path_to_save = "C:/Users/Desktop/MasterThesis/images/";
 			std::string image_to_save;
 
-			std::cout << "Please input image to download: ";
+			std::cout << "Please input name and format on image to download: ";
 			std::cin >> image_to_download;
-			std::cout << "Please input image to save: ";
+			std::cout << "Please input name and format on image to save: ";
 			std::cin >> image_to_save;
 
 			std::string full_path_download = path_to_download + image_to_download;
@@ -229,30 +229,24 @@ int main(int argc, char* argv[]) {
 
 		//Test take photoand download
 		if (option == 7) {
-			int test_cout = 100;
-			int test = -1;
-			while (test_cout-- != 0) {
-				const auto url = cam->TakePhoto();
-				if (!url.IsSingleOrigin() || url.Empty()) {
-					std::cout << "Failed to take picture" << std::endl;
-					return -1;
-				}
-
-				std::string download_url = url.GetSingleOrigin();
-				std::string image_insp = download_url.substr(download_url.rfind("/") + 1);
-				std::string image_jpg = image_insp.substr(0, image_insp.find('.')) + ".jpg";
-				std::string save_path = "C:/Users/Desktop/MasterThesis/Images/" + image_jpg;
-
-				const auto ret = cam->DownloadCameraFile(download_url, save_path);
-				if (ret) {
-					std::cout << "Download " << image_jpg << " succeed!!!" << std::endl;
-				}
-				else {
-					std::cout << "Download " << image_jpg << " failed!!!" << std::endl;
-				}
+			const auto url = cam->TakePhoto();
+			if (!url.IsSingleOrigin() || url.Empty()) {
+				std::cout << "Failed to take picture" << std::endl;
+				return -1;
 			}
-			cam->Close();
-			return 0;
+
+			std::string download_url = url.GetSingleOrigin();
+			std::string image_insp = download_url.substr(download_url.rfind("/") + 1);
+			std::string image_jpg = image_insp.substr(0, image_insp.find('.')) + ".jpg";
+			std::string save_path = "C:/Users/Desktop/MasterThesis/images/" + image_jpg;
+
+			const auto ret = cam->DownloadCameraFile(download_url, save_path);
+			if (ret) {
+				std::cout << "Download " << image_jpg << " succeed!!!" << std::endl;
+			}
+			else {
+				std::cout << "Download " << image_jpg << " failed!!!" << std::endl;
+			}
 		}
 
 		//Get current capture status
@@ -334,33 +328,12 @@ int main(int argc, char* argv[]) {
 
 		if (option == 13) {
 
-			/*std::vector<std::string> input_paths;
-			std::string input_image;
-			std::string output_image;
-			std::string output_path;
-
-			std::cout << "Please input image to stitch:";
-
-			while (std::cin >> input_image) {
-
-				std::string path = "C:/Users/Desktop/MasterThesis/Images/";
-				std::string full_path = path + input_image;
-				input_paths.push_back(full_path);
-
-				if (std::cin.get() == '\n')
-					std::cout << "Please name the stitched image: ";
-
-				std::cin >> output_image;
-				output_path = path + output_image + ".jpg";
-				break;
-			}*/
-
 			std::vector<std::string> input_paths;
 			std::string input_image;
 			std::string output_image;
 			std::string output_path;
 
-			std::cout << "Please input image to stitch:";
+			std::cout << "Please input name and format on image to stitch:";
 
 			while (std::cin >> input_image) {
 
@@ -372,7 +345,7 @@ int main(int argc, char* argv[]) {
 				input_paths.push_back(full_path);
 
 				if (std::cin.get() == '\n')
-					std::cout << "Please name the stitched image: ";
+					std::cout << "Please input name for stitched image ";
 				std::cin >> output_image;
 
 				output_path = stitch_path + output_image + ".jpg";
