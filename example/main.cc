@@ -159,7 +159,7 @@ int main(int argc, char* argv[]) {
 			std::string path_to_download = "/DCIM/Camera01/";
 			std::string image_to_download;
 
-			std::string path_to_save = "C:/Users/signa/Desktop/MasterThesis/Images/";
+			std::string path_to_save = "C:/Users/Desktop/MasterThesis/Images/";
 			std::string image_to_save;
 
 			std::cout << "Please input image to download: ";
@@ -241,7 +241,7 @@ int main(int argc, char* argv[]) {
 				std::string download_url = url.GetSingleOrigin();
 				std::string image_insp = download_url.substr(download_url.rfind("/") + 1);
 				std::string image_jpg = image_insp.substr(0, image_insp.find('.')) + ".jpg";
-				std::string save_path = "C:/Users/signa/Desktop/MasterThesis/Images/" + image_jpg;
+				std::string save_path = "C:/Users/Desktop/MasterThesis/Images/" + image_jpg;
 
 				const auto ret = cam->DownloadCameraFile(download_url, save_path);
 				if (ret) {
@@ -334,7 +334,7 @@ int main(int argc, char* argv[]) {
 
 		if (option == 13) {
 
-			std::vector<std::string> input_paths;
+			/*std::vector<std::string> input_paths;
 			std::string input_image;
 			std::string output_image;
 			std::string output_path;
@@ -343,7 +343,7 @@ int main(int argc, char* argv[]) {
 
 			while (std::cin >> input_image) {
 
-				std::string path = "C:/Users/Victoria/Documents/Github/MasterThesis/Images/";
+				std::string path = "C:/Users/Desktop/MasterThesis/Images/";
 				std::string full_path = path + input_image;
 				input_paths.push_back(full_path);
 
@@ -353,7 +353,32 @@ int main(int argc, char* argv[]) {
 				std::cin >> output_image;
 				output_path = path + output_image + ".jpg";
 				break;
+			}*/
+
+			std::vector<std::string> input_paths;
+			std::string input_image;
+			std::string output_image;
+			std::string output_path;
+
+			std::cout << "Please input image to stitch:";
+
+			while (std::cin >> input_image) {
+
+				std::string image_path = "C:/Users/Desktop/MasterThesis/images/";
+				std::string stitch_path = "C:/Users/Desktop/MasterThesis/stitched_images/";
+
+				std::string full_path = image_path + input_image;
+
+				input_paths.push_back(full_path);
+
+				if (std::cin.get() == '\n')
+					std::cout << "Please name the stitched image: ";
+				std::cin >> output_image;
+
+				output_path = stitch_path + output_image + ".jpg";
+				break;
 			}
+
 			// Stichtypes: 
 			//TEMPLATE (fast-not good), OPTFLOW (slow-best), DYNAMICSTICH (fast-relative good)
 			STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;

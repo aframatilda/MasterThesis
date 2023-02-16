@@ -1,6 +1,6 @@
-^C:\USERS\VICTORIA\DOCUMENTS\GITHUB\MASTERTHESIS\BUILD\CMAKEFILES\3621D238DE5C5F291BE9E8403BF251BE\GENERATE.STAMP.RULE
+^C:\USERS\DESKTOP\MASTERTHESIS\BUILD\CMAKEFILES\8459F15D9B00A6A203DC203DC83155AC\GENERATE.STAMP.RULE
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Victoria/Documents/GitHub/MasterThesis/example -BC:/Users/Victoria/Documents/GitHub/MasterThesis/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Victoria/Documents/GitHub/MasterThesis/build/CameraSDKTest.sln
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Desktop/MasterThesis/example -BC:/Users/Desktop/MasterThesis/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Desktop/MasterThesis/build/CameraSDKTest.sln
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

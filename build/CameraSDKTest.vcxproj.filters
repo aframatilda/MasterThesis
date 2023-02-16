@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\Victoria\Documents\GitHub\MasterThesis\example\main.cc">
+    <ClCompile Include="C:\Users\Desktop\MasterThesis\example\main.cc">
       <Filter>Src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Victoria\Documents\GitHub\MasterThesis\example\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\Desktop\MasterThesis\example\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Src">
-      <UniqueIdentifier>{43A2E78D-6309-3802-BA81-10F114737834}</UniqueIdentifier>
+      <UniqueIdentifier>{8B81A4F8-9AD9-340C-A1C7-31F5327179D0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
