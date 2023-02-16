@@ -345,7 +345,7 @@ int main(int argc, char* argv[]) {
 				input_paths.push_back(full_path);
 
 				if (std::cin.get() == '\n')
-					std::cout << "Please input name for stitched image ";
+					std::cout << "Please input name for stitched image: ";
 				std::cin >> output_image;
 
 				output_path = stitch_path + output_image + ".jpg";
