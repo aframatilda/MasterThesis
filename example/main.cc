@@ -7,16 +7,14 @@
 #include <vector>
 #include <string>
 
-//**************** Image stiching ****************
+//*** Image stiching ***
 #include <stitcher/stitcher.h>
 #include <stitcher/common.h>
 #include <algorithm>
 #include <condition_variable>
 #include <mutex>
 #include <chrono>
-
 using namespace std::chrono;
-
 
 class TestStreamDelegate : public ins_camera::StreamDelegate {
 public:
@@ -96,15 +94,19 @@ int main(int argc, char* argv[]) {
 	std::cout << "2: Get file list(video and photo)" << std::endl;
 	std::cout << "3: Delete file" << std::endl;
 	std::cout << "4: Download file" << std::endl;
-	std::cout << "5: Test set exposure settings" << std::endl;
-	std::cout << "6: Test set capture settings" << std::endl;
-	std::cout << "7: Test take photo and download" << std::endl;
-	std::cout << "8: Get current capture status" << std::endl;
-	std::cout << "9: Start timelapse" << std::endl;
-	std::cout << "10: Stop timelapse" << std::endl;
-	std::cout << "11: Get battery status" << std::endl;
-	std::cout << "12: Get storage info" << std::endl;
-	std::cout << "13: Stitch image" << std::endl;
+	std::cout << "5: Set exposure settings" << std::endl;
+	std::cout << "6: Set capture settings" << std::endl;
+	std::cout << "7: Take photo and download" << std::endl;
+	std::cout << "8: Stitch image and download" << std::endl;
+	std::cout << "9: Get current capture status" << std::endl;
+	std::cout << "10: Start timelapse" << std::endl;
+	std::cout << "11: Stop timelapse" << std::endl;
+	std::cout << "12: Get battery status" << std::endl;
+	std::cout << "13: Get storage info" << std::endl;
+
+	//Testing
+	std::cout << "14: Take photo, stitch and download image" << std::endl;
+
 	std::cout << "0: Exit\n" << std::endl;
 
 	auto camera_type = cam->GetCameraType();
@@ -249,84 +251,7 @@ int main(int argc, char* argv[]) {
 			}
 		}
 
-		//Get current capture status
 		if (option == 8) {
-			auto ret = cam->GetCaptureCurrentStatus();
-			if (ret == ins_camera::CaptureStatus::NOT_CAPTURE) {
-				std::cout << "Current statue : not capture" << std::endl;;
-			}
-			else {
-				std::cout << "Current statue : capture" << std::endl;
-			}
-		}
-
-		//Start timelapse
-		if (option == 9) {
-			ins_camera::TimelapseParam param;
-			param.mode = ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO;
-			param.duration = -1;
-			param.lapseTime = 3000;
-			param.accelerate_fequency = 5;
-			if (!cam->SetTimeLapseOption(param)) {
-				std::cerr << "Failed to set capture settings." << std::endl;
-			}
-			else {
-				auto ret = cam->StartTimeLapse(param.mode);
-				if (ret) {
-					std::cerr << "Success!" << std::endl;
-				}
-				else {
-					std::cerr << "Failed to start timelapse" << std::endl;
-				}
-			}
-		}
-
-		//Stop timelapse
-		if (option == 10) {
-			auto url = cam->StopTimeLapse(ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO);
-			if (url.Empty()) {
-				std::cerr << "Stop timelapse failed" << std::endl;
-				continue;
-			}
-			auto& origins = url.OriginUrls();
-			std::cout << "Stop timelapse success" << std::endl;
-			for (auto& origin_url : origins) {
-				std::cout << "Url:" << origin_url << std::endl;
-			}
-		}
-
-		//Get battery status
-		if (option == 11) {
-			if (!cam->IsConnected()) {
-				std::cout << "Device is offline" << std::endl;
-				break;
-			}
-
-			ins_camera::BatteryStatus status;
-			bool ret = cam->GetBatteryStatus(status);
-			if (!ret) {
-				std::cerr << "GetBatteryStatus failed" << std::endl;
-				continue;
-			}
-			std::cout << "PowerType : " << status.power_type << std::endl;
-			std::cout << "Battery_level : " << status.battery_level << std::endl;
-			std::cout << "Battery_scale : " << status.battery_scale << std::endl;
-		}
-
-		//Get storage info
-		if (option == 12) {
-			ins_camera::StorageStatus status;
-			bool ret = cam->GetStorageState(status);
-			if (!ret) {
-				std::cerr << "GetBatteryStatus failed" << std::endl;
-				continue;
-			}
-			std::cout << "Free_space : " << status.free_space << std::endl;
-			std::cout << "Total_space : " << status.total_space << std::endl;
-			std::cout << "State : " << status.state << std::endl;
-		}
-
-		if (option == 13) {
 
 			std::vector<std::string> input_paths;
 			std::string input_image;
@@ -338,7 +263,7 @@ int main(int argc, char* argv[]) {
 			while (std::cin >> input_image) {
 
 				std::string image_path = "C:/Users/Desktop/MasterThesis/images/";
-				std::string stitch_path = "C:/Users/Desktop/MasterThesis/stitched_images/";
+				std::string stitched_image_path = "C:/Users/Desktop/MasterThesis/stitched_images/";
 
 				std::string full_path = image_path + input_image;
 
@@ -348,7 +273,7 @@ int main(int argc, char* argv[]) {
 					std::cout << "Please input name for stitched image: ";
 				std::cin >> output_image;
 
-				output_path = stitch_path + output_image + ".jpg";
+				output_path = stitched_image_path + output_image + ".jpg";
 				break;
 			}
 
@@ -405,30 +330,188 @@ int main(int argc, char* argv[]) {
 			}
 		}
 
-		if (option == 30) {
-			const auto file_list = cam->GetCameraFilesList();
-			for (const auto& file : file_list) {
-				std::string save_path = "D:/testImage" + file;
-				int ret = cam->DownloadCameraFile(file, save_path);
+		//Get current capture status
+		if (option == 9) {
+			auto ret = cam->GetCaptureCurrentStatus();
+			if (ret == ins_camera::CaptureStatus::NOT_CAPTURE) {
+				std::cout << "Current statue : not capture" << std::endl;;
+			}
+			else {
+				std::cout << "Current statue : capture" << std::endl;
+			}
+		}
+
+		//Start timelapse
+		if (option == 10) {
+			ins_camera::TimelapseParam param;
+			param.mode = ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO;
+			param.duration = -1;
+			param.lapseTime = 3000;
+			param.accelerate_fequency = 5;
+			if (!cam->SetTimeLapseOption(param)) {
+				std::cerr << "Failed to set capture settings." << std::endl;
+			}
+			else {
+				auto ret = cam->StartTimeLapse(param.mode);
 				if (ret) {
-					std::cout << "Download " << file << " succeed!!!" << std::endl;
+					std::cerr << "Success!" << std::endl;
 				}
 				else {
-					std::cout << "Download " << file << " failed!!!" << std::endl;
+					std::cerr << "Failed to start timelapse" << std::endl;
 				}
 			}
 		}
 
-		if (option == 31) {
-			const auto file_list = cam->GetCameraFilesList();
-			for (const auto& file : file_list) {
-				const auto ret = cam->DeleteCameraFile(file);
-				if (ret) {
-					std::cout << file << " Deletion succeed" << std::endl;
+		//Stop timelapse
+		if (option == 11) {
+			auto url = cam->StopTimeLapse(ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO);
+			if (url.Empty()) {
+				std::cerr << "Stop timelapse failed" << std::endl;
+				continue;
+			}
+			auto& origins = url.OriginUrls();
+			std::cout << "Stop timelapse success" << std::endl;
+			for (auto& origin_url : origins) {
+				std::cout << "Url:" << origin_url << std::endl;
+			}
+		}
+
+		//Get battery status
+		if (option == 12) {
+			if (!cam->IsConnected()) {
+				std::cout << "Device is offline" << std::endl;
+				break;
+			}
+
+			ins_camera::BatteryStatus status;
+			bool ret = cam->GetBatteryStatus(status);
+			if (!ret) {
+				std::cerr << "GetBatteryStatus failed" << std::endl;
+				continue;
+			}
+			std::cout << "PowerType : " << status.power_type << std::endl;
+			std::cout << "Battery_level : " << status.battery_level << std::endl;
+			std::cout << "Battery_scale : " << status.battery_scale << std::endl;
+		}
+
+		//Get storage info
+		if (option == 13) {
+			ins_camera::StorageStatus status;
+			bool ret = cam->GetStorageState(status);
+			if (!ret) {
+				std::cerr << "GetBatteryStatus failed" << std::endl;
+				continue;
+			}
+			std::cout << "Free_space : " << status.free_space << std::endl;
+			std::cout << "Total_space : " << status.total_space << std::endl;
+			std::cout << "State : " << status.state << std::endl;
+		}
+
+		//Take photo, stitch and download image
+		if (option == 14) {
+			const auto url = cam->TakePhoto();
+			if (!url.IsSingleOrigin() || url.Empty()) {
+				std::cout << "Failed to take picture" << std::endl;
+				return -1;
+			}
+
+			std::string download_url = url.GetSingleOrigin();
+			std::string image_insp = download_url.substr(download_url.rfind("/") + 1);
+			std::string image_jpg = image_insp.substr(0, image_insp.find('.')) + ".jpg";
+			std::string save_path = "C:/Users/Desktop/MasterThesis/images/" + image_jpg;
+			std::vector<std::string> input_paths = { save_path };
+
+			const auto ret = cam->DownloadCameraFile(download_url, save_path);
+			if (ret) {
+				std::string output_image;
+				std::cout << "Type name of image: ";
+				std::cin >> output_image;
+				std::string output_path = "C:/Users/Desktop/MasterThesis/stitched_images/" + output_image + ".jpg";
+
+				// Stichtypes: 
+				//TEMPLATE (fast-not good), OPTFLOW (slow-best), DYNAMICSTICH (fast-relative good)
+				STITCH_TYPE stitch_type = STITCH_TYPE::TEMPLATE;
+				HDR_TYPE hdr_type = HDR_TYPE::ImageHdr_NONE;
+
+				int output_width = 1920;
+				int output_height = 960;
+
+				bool enable_flowstate = true;
+				bool enable_cuda = false;
+				bool enalbe_stitchfusion = true;
+				bool enable_colorplus = true;
+				bool enable_directionlock = true;
+				bool enable_denoise = true;
+				std::string colorpuls_model_path;
+
+				if (input_paths.empty()) {
+					std::cout << "Can not find input_file" << std::endl;
+					return -1;
 				}
+
+				if (output_path.empty()) {
+					std::cout << "Can not find output_file" << std::endl;
+					return -1;
+				}
+
+				if (colorpuls_model_path.empty()) {
+					enable_colorplus = false;
+				}
+
+				int count = 1;
+				while (count--) {
+					std::string suffix = input_paths[0].substr(input_paths[0].find_last_of(".") + 1);
+					std::transform(suffix.begin(), suffix.end(), suffix.begin(), ::tolower);
+					if (suffix == "insp" || suffix == "jpg") {
+						auto image_stitcher = std::make_shared<ins_media::ImageStitcher>();
+						image_stitcher->SetInputPath(input_paths);
+						image_stitcher->SetStitchType(stitch_type);
+						image_stitcher->SetHDRType(hdr_type);
+						image_stitcher->SetOutputPath(output_path);
+						image_stitcher->SetOutputSize(output_width, output_height);
+						image_stitcher->EnableFlowState(enable_flowstate);
+						image_stitcher->EnableDenoise(enable_denoise);
+						image_stitcher->EnableCuda(enable_cuda);
+						image_stitcher->EnableColorPlus(enable_colorplus, colorpuls_model_path);
+						image_stitcher->Stitch();
+						std::cout << "Stitching success!!\n";
+					}
+				}
+
+
+			}
+			else {
+				std::cout << "Something went wrong..." << std::endl;
+			}
+		}
+
+		/*if (option == 30) {
+		const auto file_list = cam->GetCameraFilesList();
+		for (const auto& file : file_list) {
+			std::string save_path = "D:/testImage" + file;
+			int ret = cam->DownloadCameraFile(file, save_path);
+			if (ret) {
+				std::cout << "Download " << file << " succeed!!!" << std::endl;
+			}
+			else {
+				std::cout << "Download " << file << " failed!!!" << std::endl;
 			}
 		}
 	}
+
+	if (option == 31) {
+		const auto file_list = cam->GetCameraFilesList();
+		for (const auto& file : file_list) {
+			const auto ret = cam->DeleteCameraFile(file);
+			if (ret) {
+				std::cout << file << " Deletion succeed" << std::endl;
+			}
+		}
+	}*/
+	}
+
+
 	cam->Close();
 	return 0;
+
 }
