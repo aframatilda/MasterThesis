@@ -16,6 +16,17 @@
 #include <chrono>
 using namespace std::chrono;
 
+//******** FTP ******** 
+	//FTP URL : ftp.dlptest.com or ftp://ftp.dlptest.com/
+	//FTP User : dlpuser
+	//Password : rNrKYTX9g7z3RgJRmxWuGHbeu
+
+
+//#include <include/ftp/FtpClient.h>
+//#include <secrets.h>
+
+//***********************
+
 class TestStreamDelegate : public ins_camera::StreamDelegate {
 public:
 	TestStreamDelegate() {
@@ -89,6 +100,12 @@ int main(int argc, char* argv[]) {
 
 	std::cout << "Succeed to open camera!\n" << std::endl;
 
+	//********** FTP with dlpTest **********
+
+	
+
+	//**********************************************
+
 	std::cout << "Usage:\n" << std::endl;
 	std::cout << "1: Take photo" << std::endl;
 	std::cout << "2: Get file list(video and photo)" << std::endl;
@@ -98,15 +115,12 @@ int main(int argc, char* argv[]) {
 	std::cout << "6: Set capture settings" << std::endl;
 	std::cout << "7: Take photo and download" << std::endl;
 	std::cout << "8: Stitch image and download" << std::endl;
-	std::cout << "9: Get current capture status" << std::endl;
-	std::cout << "10: Start timelapse" << std::endl;
-	std::cout << "11: Stop timelapse" << std::endl;
-	std::cout << "12: Get battery status" << std::endl;
-	std::cout << "13: Get storage info" << std::endl;
-
-	//Testing
-	std::cout << "14: Take photo, stitch and download image" << std::endl;
-
+	std::cout << "9: Take photo, stitch and download image" << std::endl;
+	std::cout << "10: Get current capture status" << std::endl;
+	std::cout << "11: Start timelapse" << std::endl;
+	std::cout << "12: Stop timelapse" << std::endl;
+	std::cout << "13: Get battery status" << std::endl;
+	std::cout << "14: Get storage info" << std::endl;
 	std::cout << "0: Exit\n" << std::endl;
 
 	auto camera_type = cam->GetCameraType();
@@ -330,85 +344,8 @@ int main(int argc, char* argv[]) {
 			}
 		}
 
-		//Get current capture status
-		if (option == 9) {
-			auto ret = cam->GetCaptureCurrentStatus();
-			if (ret == ins_camera::CaptureStatus::NOT_CAPTURE) {
-				std::cout << "Current statue : not capture" << std::endl;;
-			}
-			else {
-				std::cout << "Current statue : capture" << std::endl;
-			}
-		}
-
-		//Start timelapse
-		if (option == 10) {
-			ins_camera::TimelapseParam param;
-			param.mode = ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO;
-			param.duration = -1;
-			param.lapseTime = 3000;
-			param.accelerate_fequency = 5;
-			if (!cam->SetTimeLapseOption(param)) {
-				std::cerr << "Failed to set capture settings." << std::endl;
-			}
-			else {
-				auto ret = cam->StartTimeLapse(param.mode);
-				if (ret) {
-					std::cerr << "Success!" << std::endl;
-				}
-				else {
-					std::cerr << "Failed to start timelapse" << std::endl;
-				}
-			}
-		}
-
-		//Stop timelapse
-		if (option == 11) {
-			auto url = cam->StopTimeLapse(ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO);
-			if (url.Empty()) {
-				std::cerr << "Stop timelapse failed" << std::endl;
-				continue;
-			}
-			auto& origins = url.OriginUrls();
-			std::cout << "Stop timelapse success" << std::endl;
-			for (auto& origin_url : origins) {
-				std::cout << "Url:" << origin_url << std::endl;
-			}
-		}
-
-		//Get battery status
-		if (option == 12) {
-			if (!cam->IsConnected()) {
-				std::cout << "Device is offline" << std::endl;
-				break;
-			}
-
-			ins_camera::BatteryStatus status;
-			bool ret = cam->GetBatteryStatus(status);
-			if (!ret) {
-				std::cerr << "GetBatteryStatus failed" << std::endl;
-				continue;
-			}
-			std::cout << "PowerType : " << status.power_type << std::endl;
-			std::cout << "Battery_level : " << status.battery_level << std::endl;
-			std::cout << "Battery_scale : " << status.battery_scale << std::endl;
-		}
-
-		//Get storage info
-		if (option == 13) {
-			ins_camera::StorageStatus status;
-			bool ret = cam->GetStorageState(status);
-			if (!ret) {
-				std::cerr << "GetBatteryStatus failed" << std::endl;
-				continue;
-			}
-			std::cout << "Free_space : " << status.free_space << std::endl;
-			std::cout << "Total_space : " << status.total_space << std::endl;
-			std::cout << "State : " << status.state << std::endl;
-		}
-
 		//Take photo, stitch and download image
-		if (option == 14) {
+		if (option == 9) {
 			const auto url = cam->TakePhoto();
 			if (!url.IsSingleOrigin() || url.Empty()) {
 				std::cout << "Failed to take picture" << std::endl;
@@ -477,15 +414,90 @@ int main(int argc, char* argv[]) {
 						std::cout << "Stitching success!!\n";
 					}
 				}
-
-
 			}
 			else {
 				std::cout << "Something went wrong..." << std::endl;
 			}
 		}
 
-		/*if (option == 30) {
+		//Get current capture status
+		if (option == 10) {
+			auto ret = cam->GetCaptureCurrentStatus();
+			if (ret == ins_camera::CaptureStatus::NOT_CAPTURE) {
+				std::cout << "Current statue : not capture" << std::endl;;
+			}
+			else {
+				std::cout << "Current statue : capture" << std::endl;
+			}
+		}
+
+		//Start timelapse
+		if (option == 11) {
+			ins_camera::TimelapseParam param;
+			param.mode = ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO;
+			param.duration = -1;
+			param.lapseTime = 3000;
+			param.accelerate_fequency = 5;
+			if (!cam->SetTimeLapseOption(param)) {
+				std::cerr << "Failed to set capture settings." << std::endl;
+			}
+			else {
+				auto ret = cam->StartTimeLapse(param.mode);
+				if (ret) {
+					std::cerr << "Success!" << std::endl;
+				}
+				else {
+					std::cerr << "Failed to start timelapse" << std::endl;
+				}
+			}
+		}
+
+		//Stop timelapse
+		if (option == 12) {
+			auto url = cam->StopTimeLapse(ins_camera::CameraTimelapseMode::MOBILE_TIMELAPSE_VIDEO);
+			if (url.Empty()) {
+				std::cerr << "Stop timelapse failed" << std::endl;
+				continue;
+			}
+			auto& origins = url.OriginUrls();
+			std::cout << "Stop timelapse success" << std::endl;
+			for (auto& origin_url : origins) {
+				std::cout << "Url:" << origin_url << std::endl;
+			}
+		}
+
+		//Get battery status
+		if (option == 13) {
+			if (!cam->IsConnected()) {
+				std::cout << "Device is offline" << std::endl;
+				break;
+			}
+
+			ins_camera::BatteryStatus status;
+			bool ret = cam->GetBatteryStatus(status);
+			if (!ret) {
+				std::cerr << "GetBatteryStatus failed" << std::endl;
+				continue;
+			}
+			std::cout << "PowerType : " << status.power_type << std::endl;
+			std::cout << "Battery_level : " << status.battery_level << std::endl;
+			std::cout << "Battery_scale : " << status.battery_scale << std::endl;
+		}
+
+		//Get storage info
+		if (option == 14) {
+			ins_camera::StorageStatus status;
+			bool ret = cam->GetStorageState(status);
+			if (!ret) {
+				std::cerr << "GetBatteryStatus failed" << std::endl;
+				continue;
+			}
+			std::cout << "Free_space : " << status.free_space << std::endl;
+			std::cout << "Total_space : " << status.total_space << std::endl;
+			std::cout << "State : " << status.state << std::endl;
+		}
+
+		/*if (option == 15) {
 		const auto file_list = cam->GetCameraFilesList();
 		for (const auto& file : file_list) {
 			std::string save_path = "D:/testImage" + file;
@@ -499,7 +511,7 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	if (option == 31) {
+	if (option == 16) {
 		const auto file_list = cam->GetCameraFilesList();
 		for (const auto& file : file_list) {
 			const auto ret = cam->DeleteCameraFile(file);
