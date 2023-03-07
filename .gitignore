@@ -369,3 +369,6 @@ FodyWeavers.xsd
 .vs/MasterThesis/v17/Browse.VC.db
 *.db
 build/.vs/CameraSDKTest/v17/Browse.VC.db
+*.db
+build/.vs/CameraSDKTest/v17/Browse.VC.db
+build/.vs/CameraSDKTest/v17/Browse.VC.db
