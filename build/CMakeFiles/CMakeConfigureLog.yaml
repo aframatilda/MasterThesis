@@ -24,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.4.1+9a89d02ff for .NET Framework
-      Build started 2023-02-22 14:56:38.
+      Build started 2023-03-07 13:55:12.
       Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
@@ -50,7 +50,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.68
+      Time Elapsed 00:00:01.30
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -76,7 +76,7 @@ events:
       The output was:
       0
       MSBuild version 17.4.1+9a89d02ff for .NET Framework
-      Build started 2023-02-22 14:56:39.
+      Build started 2023-03-07 13:55:14.
       Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\3.26.0-rc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
         Creating directory "Debug\\".
@@ -102,7 +102,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:00.51
+      Time Elapsed 00:00:00.86
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -121,8 +121,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-i46cq2"
-      binary: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-i46cq2"
+      source: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-88izan"
+      binary: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-88izan"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -131,36 +131,36 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-i46cq2
+        Change Dir: C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-88izan
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_92716.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
-        Build started 2023-02-22 14:56:40.
-        Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i46cq2\\cmTC_92716.vcxproj" on node 1 (default targets).
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e0ce6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+        Build started 2023-03-07 13:55:15.
+        Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-88izan\\cmTC_e0ce6.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_92716.dir\\Debug\\".
-          Creating directory "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i46cq2\\Debug\\".
-          Creating directory "cmTC_92716.dir\\Debug\\cmTC_92716.tlog\\".
+          Creating directory "cmTC_e0ce6.dir\\Debug\\".
+          Creating directory "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-88izan\\Debug\\".
+          Creating directory "cmTC_e0ce6.dir\\Debug\\cmTC_e0ce6.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_92716.dir\\Debug\\cmTC_92716.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_e0ce6.dir\\Debug\\cmTC_e0ce6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92716.dir\\Debug\\\\" /Fd"cmTC_92716.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e0ce6.dir\\Debug\\\\" /Fd"cmTC_e0ce6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31937 for x64
           CMakeCCompilerABI.c
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92716.dir\\Debug\\\\" /Fd"cmTC_92716.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e0ce6.dir\\Debug\\\\" /Fd"cmTC_e0ce6.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i46cq2\\Debug\\cmTC_92716.exe" /INCREMENTAL /ILK:"cmTC_92716.dir\\Debug\\cmTC_92716.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-i46cq2/Debug/cmTC_92716.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-i46cq2/Debug/cmTC_92716.lib" /MACHINE:X64  /machine:x64 cmTC_92716.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_92716.vcxproj -> C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i46cq2\\Debug\\cmTC_92716.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-88izan\\Debug\\cmTC_e0ce6.exe" /INCREMENTAL /ILK:"cmTC_e0ce6.dir\\Debug\\cmTC_e0ce6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-88izan/Debug/cmTC_e0ce6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-88izan/Debug/cmTC_e0ce6.lib" /MACHINE:X64  /machine:x64 cmTC_e0ce6.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_e0ce6.vcxproj -> C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-88izan\\Debug\\cmTC_e0ce6.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_92716.dir\\Debug\\cmTC_92716.tlog\\unsuccessfulbuild".
-          Touching "cmTC_92716.dir\\Debug\\cmTC_92716.tlog\\cmTC_92716.lastbuildstate".
-        Done Building Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-i46cq2\\cmTC_92716.vcxproj" (default targets).
+          Deleting file "cmTC_e0ce6.dir\\Debug\\cmTC_e0ce6.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e0ce6.dir\\Debug\\cmTC_e0ce6.tlog\\cmTC_e0ce6.lastbuildstate".
+        Done Building Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-88izan\\cmTC_e0ce6.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.50
+        Time Elapsed 00:00:00.78
         
       exitCode: 0
   -
@@ -172,8 +172,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-0os60q"
-      binary: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-0os60q"
+      source: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-y1jowc"
+      binary: "C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-y1jowc"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -182,36 +182,36 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-0os60q
+        Change Dir: C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-y1jowc
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2193a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
-        Build started 2023-02-22 14:56:41.
-        Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0os60q\\cmTC_2193a.vcxproj" on node 1 (default targets).
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6d06d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n && MSBuild version 17.4.1+9a89d02ff for .NET Framework
+        Build started 2023-03-07 13:55:16.
+        Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y1jowc\\cmTC_6d06d.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_2193a.dir\\Debug\\".
-          Creating directory "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0os60q\\Debug\\".
-          Creating directory "cmTC_2193a.dir\\Debug\\cmTC_2193a.tlog\\".
+          Creating directory "cmTC_6d06d.dir\\Debug\\".
+          Creating directory "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y1jowc\\Debug\\".
+          Creating directory "cmTC_6d06d.dir\\Debug\\cmTC_6d06d.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_2193a.dir\\Debug\\cmTC_2193a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Creating "cmTC_6d06d.dir\\Debug\\cmTC_6d06d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2193a.dir\\Debug\\\\" /Fd"cmTC_2193a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6d06d.dir\\Debug\\\\" /Fd"cmTC_6d06d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.34.31937 for x64
           CMakeCXXCompilerABI.cpp
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_2193a.dir\\Debug\\\\" /Fd"cmTC_2193a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6d06d.dir\\Debug\\\\" /Fd"cmTC_6d06d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0os60q\\Debug\\cmTC_2193a.exe" /INCREMENTAL /ILK:"cmTC_2193a.dir\\Debug\\cmTC_2193a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-0os60q/Debug/cmTC_2193a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-0os60q/Debug/cmTC_2193a.lib" /MACHINE:X64  /machine:x64 cmTC_2193a.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_2193a.vcxproj -> C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0os60q\\Debug\\cmTC_2193a.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y1jowc\\Debug\\cmTC_6d06d.exe" /INCREMENTAL /ILK:"cmTC_6d06d.dir\\Debug\\cmTC_6d06d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-y1jowc/Debug/cmTC_6d06d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Desktop/MasterThesis/build/CMakeFiles/CMakeScratch/TryCompile-y1jowc/Debug/cmTC_6d06d.lib" /MACHINE:X64  /machine:x64 cmTC_6d06d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6d06d.vcxproj -> C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y1jowc\\Debug\\cmTC_6d06d.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_2193a.dir\\Debug\\cmTC_2193a.tlog\\unsuccessfulbuild".
-          Touching "cmTC_2193a.dir\\Debug\\cmTC_2193a.tlog\\cmTC_2193a.lastbuildstate".
-        Done Building Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0os60q\\cmTC_2193a.vcxproj" (default targets).
+          Deleting file "cmTC_6d06d.dir\\Debug\\cmTC_6d06d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6d06d.dir\\Debug\\cmTC_6d06d.tlog\\cmTC_6d06d.lastbuildstate".
+        Done Building Project "C:\\Users\\Desktop\\MasterThesis\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y1jowc\\cmTC_6d06d.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:00.50
+        Time Elapsed 00:00:01.03
         
       exitCode: 0
 ...

@@ -11,6 +11,7 @@
 /build/cublasLt64_11.dll
 /build/cufft64_10.dll
 /build/opencv_world410.dll
+
 *.userosscache
 *.sln.docstates
 
@@ -365,3 +366,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+.vs/MasterThesis/v17/Browse.VC.db
+*.db
+build/.vs/CameraSDKTest/v17/Browse.VC.db

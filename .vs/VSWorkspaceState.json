@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\example",
-    "\\include"
+    ""
   ],
-  "SelectedNode": "\\example\\main.cc",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
