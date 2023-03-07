@@ -366,3 +366,11 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.db
+build/CMakeFiles/3.26.0-rc1/CMakeDetermineCompilerABI_C.bin
+build/CMakeFiles/3.26.0-rc1/CMakeDetermineCompilerABI_CXX.bin
+build/.vs/CameraSDKTest/v17/Browse.VC.db
+build/.vs/CameraSDKTest/v17/.suo
+build/CMakeFiles/3.26.0-rc1/CompilerIdC/CompilerIdC.exe
+build/CMakeFiles/3.26.0-rc1/CompilerIdCXX/CompilerIdCXX.exe
+build/CMakeFiles/CMakeConfigureLog.yaml
