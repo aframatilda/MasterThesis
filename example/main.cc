@@ -6,6 +6,8 @@
 #include <regex>
 #include <vector>
 #include <string>
+#include "crow.h"
+
 
 //*** Image stiching ***
 #include <stitcher/stitcher.h>
@@ -58,6 +60,19 @@ private:
 };
 
 int main(int argc, char* argv[]) {
+
+	crow::SimpleApp app; //define your crow application
+
+	//define your endpoint at the root directory
+	CROW_ROUTE(app, "/")([]() {
+		return "Hello world";
+		});
+
+	//set the port, set the app to run on multiple threads, and run the app
+	app.port(18080).multithreaded().run();
+
+
+
 	std::cout << "Begin open camera..." << std::endl;
 	ins_camera::DeviceDiscovery discovery;
 	auto list = discovery.GetAvailableDevices();
