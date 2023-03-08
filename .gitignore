@@ -374,3 +374,5 @@ build/.vs/CameraSDKTest/v17/.suo
 build/CMakeFiles/3.26.0-rc1/CompilerIdC/CompilerIdC.exe
 build/CMakeFiles/3.26.0-rc1/CompilerIdCXX/CompilerIdCXX.exe
 build/CMakeFiles/CMakeConfigureLog.yaml
+*.db
+*.db
