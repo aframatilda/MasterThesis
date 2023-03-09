@@ -1,0 +1,23 @@
+{
+  //"name": "FTP_TEST",
+  "host": "ftp.dlptest.com",
+  //"port": 21,
+  "type": "ftp",
+  "username": "dlpuser",
+  "password": "rNrKYTX9g7z3RgJRmxWuGHbeu"
+  //"path": "/"
+}
+
+
+// ftp.dlptest.com
+// dlpuser
+// rNrKYTX9g7z3RgJRmxWuGHbeu
+
+//#define SECRETS_H_
+// CAMERA NAME -------------------------
+//#define CAMERA_NAME �CAMTEST_%s_%02d.jpg�
+// TEST FTP SERVER -------------------------
+// #define FTP_HOST �ftp.dlptest.com�
+// #define FTP_USER �dlpuser�
+// #define FTP_PASSWORD �rNrKYTX9g7z3RgJRmxWuGHbeu�
+// #define FTP_DIR �.�

@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin",
     "\\example",
     "\\include",
     "\\lib"
   ],
+  "SelectedNode": "\\example\\main.cc",
   "PreviewInSolutionExplorer": false
 }

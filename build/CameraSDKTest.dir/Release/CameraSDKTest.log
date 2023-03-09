@@ -1,1 +1,106 @@
-﻿  CameraSDKTest.vcxproj -> C:\Users\Victoria\Documents\GitHub\MasterThesis\bin\Release\CameraSDKTest.exe
+﻿  main.cc
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\ins_types.h(88,30): warning C4251: 'ins_camera::MediaUrl::uris_': class 'std::vector<std::string,std::allocator<std::string>>' needs to have dll-interface to be used by clients of class 'ins_camera::MediaUrl'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\ins_types.h(79,25): message : see declaration of 'std::vector<std::string,std::allocator<std::string>>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\ins_types.h(89,30): warning C4251: 'ins_camera::MediaUrl::lrv_uris_': class 'std::vector<std::string,std::allocator<std::string>>' needs to have dll-interface to be used by clients of class 'ins_camera::MediaUrl'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\ins_types.h(79,25): message : see declaration of 'std::vector<std::string,std::allocator<std::string>>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(321,50): warning C4251: 'ins_camera::ExposureSettings::private_impl_': class 'std::shared_ptr<ins_camera::ExposureSettingsPrivate>' needs to have dll-interface to be used by clients of class 'ins_camera::ExposureSettings'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(321,14): message : see declaration of 'std::shared_ptr<ins_camera::ExposureSettingsPrivate>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(376,66): warning C4251: 'ins_camera::CaptureSettings::int_values_': class 'std::unordered_map<ins_camera::CaptureSettings::SettingsType,int32_t,ins_camera::EnumClassHash,std::equal_to<ins_camera::CaptureSettings::SettingsType>,std::allocator<std::pair<const ins_camera::CaptureSettings::SettingsType,int32_t>>>' needs to have dll-interface to be used by clients of class 'ins_camera::CaptureSettings'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(376,14): message : see declaration of 'std::unordered_map<ins_camera::CaptureSettings::SettingsType,int32_t,ins_camera::EnumClassHash,std::equal_to<ins_camera::CaptureSettings::SettingsType>,std::allocator<std::pair<const ins_camera::CaptureSettings::SettingsType,int32_t>>>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(377,35): warning C4251: 'ins_camera::CaptureSettings::types_': class 'std::vector<ins_camera::CaptureSettings::SettingsType,std::allocator<ins_camera::CaptureSettings::SettingsType>>' needs to have dll-interface to be used by clients of class 'ins_camera::CaptureSettings'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\camera\photography_settings.h(355,14): message : see declaration of 'std::vector<ins_camera::CaptureSettings::SettingsType,std::allocator<ins_camera::CaptureSettings::SettingsType>>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\camera/camera.h(200,31): warning C4251: 'ins_camera::Camera::impl_': class 'std::shared_ptr<ins_camera::CameraImpl>' needs to have dll-interface to be used by clients of class 'ins_camera::Camera'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\camera/camera.h(200,8): message : see declaration of 'std::shared_ptr<ins_camera::CameraImpl>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/query_string.h(117,37): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/query_string.h(370,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/query_string.h(406,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/query_string.h(445,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/utility.h(672,1): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_parser_merged.h(589,32): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_parser_merged.h(609,32): warning C4244: '=': conversion from '__int64' to 'unsigned long', possible loss of data
+  Please define _WIN32_WINNT or _WIN32_WINDOWS appropriately. For example:
+  - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
+  - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
+  Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/json.h(1211,39): warning C4267: 'argument': conversion from 'size_t' to 'uint32_t', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/json.h(1671,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(97,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(116,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(118,1): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(221,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(367,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(378,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(390,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(401,1): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(463,1): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/mustache.h(563,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(800,70): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(821,70): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(842,70): warning C4244: 'argument': conversion from '__int64' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(864,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(880,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(895,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(945,53): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(956,45): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1002,36): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1005,33): warning C4267: '+=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1204,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1204,1): warning C4267: 'argument': conversion from 'size_t' to 'uint16_t', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1210,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1259,1): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/routing.h(1420,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\stitcher/stitcher.h(138,38): warning C4251: 'ins_media::VideoStitcher::imp_': class 'std::shared_ptr<ins_media::StitcherImp>' needs to have dll-interface to be used by clients of class 'ins_media::VideoStitcher'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\stitcher/stitcher.h(138,14): message : see declaration of 'std::shared_ptr<ins_media::StitcherImp>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\stitcher/stitcher.h(208,38): warning C4251: 'ins_media::ImageStitcher::imp_': class 'std::shared_ptr<ins_media::StitcherImp>' needs to have dll-interface to be used by clients of class 'ins_media::ImageStitcher'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\..\include\stitcher/stitcher.h(138,14): message : see declaration of 'std::shared_ptr<ins_media::StitcherImp>'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\main.cc(43,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\main.cc(44,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_connection.h(508,16): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_connection.h(464,1): message : while compiling class template member function 'void crow::Connection<Adaptor,Handler>::do_read(void)'
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_connection.h(88,28): message : see reference to function template instantiation 'void crow::Connection<Adaptor,Handler>::do_read(void)' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_server.h(201,55): message : see reference to class template instantiation 'crow::Connection<Adaptor,Handler>' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_server.h(195,1): message : while compiling class template member function 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_server.h(152,22): message : see reference to function template instantiation 'void crow::Server<crow::Crow<>,crow::SocketAdaptor>::do_accept(void)' being compiled
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/app.h(300,1): message : see reference to class template instantiation 'crow::Server<crow::Crow<>,crow::SocketAdaptor>' being compiled
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/app.h(280,1): message : while compiling class template member function 'void crow::Crow<>::run(void)'
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\main.cc(178,37): message : see reference to function template instantiation 'void crow::Crow<>::run(void)' being compiled
+C:\Users\Victoria\Documents\GitHub\MasterThesis\example\main.cc(123,18): message : see reference to class template instantiation 'crow::Crow<>' being compiled
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/parser.h(118,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/parser.h(104,1): message : while compiling class template member function 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed(const char *,int)'
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_connection.h(473,32): message : see reference to function template instantiation 'bool crow::HTTPParser<crow::Connection<Adaptor,Handler>>::feed(const char *,int)' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+C:\Users\Victoria\Documents\GitHub\MasterThesis\include\crow/http_connection.h(596,1): message : see reference to class template instantiation 'crow::HTTPParser<crow::Connection<Adaptor,Handler>>' being compiled
+          with
+          [
+              Adaptor=crow::SocketAdaptor,
+              Handler=crow::Crow<>
+          ]
+  CameraSDKTest.vcxproj -> C:\Users\Victoria\Documents\GitHub\MasterThesis\bin\Release\CameraSDKTest.exe
