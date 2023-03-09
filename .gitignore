@@ -366,3 +366,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 vcpkg/
+build/.vs/CameraSDKTest/v17/Browse.VC.db
