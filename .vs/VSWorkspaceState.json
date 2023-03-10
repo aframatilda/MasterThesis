@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\example",
-    "\\include",
-    "\\lib"
+    ""
   ],
-  "SelectedNode": "\\example\\main.cc",
+  "SelectedNode": "\\CameraSDKTest.sln",
   "PreviewInSolutionExplorer": false
 }
