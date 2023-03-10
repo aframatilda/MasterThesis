@@ -13,8 +13,6 @@
 
 std::ifstream file("file.json");
 
-
-
 //*** Image stiching ***
 #include <stitcher/stitcher.h>
 #include <stitcher/common.h>
@@ -22,10 +20,10 @@ std::ifstream file("file.json");
 #include <condition_variable>
 #include <mutex>
 #include <chrono>
+
 using namespace std::chrono;
 
 /*json j1 =
-
 {
 	//"name": "FTP_TEST",
 	{"host","ftp.dlptest.com"},
@@ -78,105 +76,21 @@ private:
 	int64_t last_timestamp = 0;
 };
 
+
+
 int main(int argc, char* argv[]) {
 
+
 	/*
-	// read file
-	std::ifstream file("file.json");
-	// json reader
-	Json::Reader reader;
-	// this will contain complete JSON data
-	Json::Value completeJsonData;
-	// reader reads the data and stores it in completeJsonData
-	reader.parse(file, completeJsonData);
-	// complete JSON data
-	cout << “Complete JSON data : “ << endl << completeJsGrade << endl;
-	// get the value associated with name key
-	cout << “Name: “ << completeJsonData[“name”] << endl;
-	// get the value associated with grade key
-	cout << “Grade: “ << completeJsonData[“grade”] << endl;
-	*/
+	curl_easy_setopt(curl, CURLOPT_USERPWD, "username:password");
+	CURL* curl = curl_easy_init();
 
-
-	/*std::ifstream file_input("input.json");
-	Json::Reader reader;
-	Json::Value root;
-	reader.parse(file_input, root);
-	cout << root;
-
-
-	
-
-	CROW_ROUTE(app, "/")
-			([] {
-			crow::json::wvalue x({ {"message", "Hello, World!"} });
-		x["message2"] = "Hello, World.. Again!";
-		return x;
-				});
-
-	CROW_ROUTE(app, "/<int>")
-		([](int count) {
-		return crow::response(std::to_string(count));
-			});
-			
-*/
-	crow::SimpleApp app; //define your crow application
-	
-
-	CROW_ROUTE(app, "/")
-		.methods("GET"_method, "POST"_method)
-		([](const crow::request& req){
-
-		if (req.method == "GET"_method){
-			CROW_LOG_INFO << "msg from client: " << req.body;
-		std::cout << req.body;
-		//return "";
-			return crow::response("You used GET");
-			
-		}
-
-		else if (req.method == "POST"_method)
-		{
-			return crow::response(200, "You used POST");
-		}
-		else
-		{
-			return crow::response("ERROR");
-		}
-		
-	});
-
-/*		
-	CROW_ROUTE(app, "/")
-		.methods("GET"_method, "POST"_method, "DELETE"_method)
-		([](const crow::request& req, const int& id) {
-
-		if (req.method == "GET"_method)
-		{
-			if ((req.url_params.get("v") != nullptr) & (req.url_params.get("q") != nullptr))
-			{
-				// ...
-			}
-			return crow::response(200, "You used GET");
-		}
-		else if (req.method == "POST"_method)
-		{
-			return crow::response("HEJ");
-			//return crow::response(200, "You used POST");
-		}
-		else if (req.method == "DELETE"_method)
-		{
-			return crow::response(200, "You used DELETE");
-		}
-		else
-		{
-			return crow::response(404);
-		}
-			});
-*/
-
-	app.port(18080).multithreaded().run();
-
+	if (curl) {
+		curl_easy_setopt(curl, CURLOPT_URL, "https://example.com/foo.bin");
+		curl_easy_setopt(curl, CURLOPT_USERNAME, "clark");
+		ret = curl_easy_perform(curl);
+		curl_easy_cleanup(curl);
+	}*/
 
 	std::cout << "Begin open camera..." << std::endl;
 	ins_camera::DeviceDiscovery discovery;
